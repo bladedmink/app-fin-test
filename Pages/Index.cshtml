@@ -1,10 +1,18 @@
 ﻿@page
 @model IndexModel
+
+@using Microsoft.Extensions.Configuration
+@inject IConfiguration Configuration
+
 @{
     ViewData["Title"] = "Home page";
+
+    var author = @Configuration.GetSection("Author").Value;
+
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome David</h1>
+    <h1 class="display-4">Welcome  </h1>
+    <h2>Author: @author</h2>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
