@@ -8,11 +8,13 @@
     ViewData["Title"] = "Home page";
 
     var author = @Configuration.GetSection("Author").Value;
+    var environment = Configuration.GetSection("Environment").Value;
 
 }
 
 <div class="text-center">
     <h1 class="display-4">Welcome  </h1>
     <h2>Author: @author</h2>
+    <h3>Environment: @environment</h3>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
